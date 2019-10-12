@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { calculatingChange } from '../../helpers/cash';
+
 import CalculatorStyle from './style';
 
 class Calculator extends Component {
@@ -8,14 +10,13 @@ class Calculator extends Component {
   }
 
   inputCashChange = (event) => {
-    // console.log(event.target.value)
     let inputCash = event.target.value;
     this.setState({ inputCash })
   }
 
   handleSubmit = () => {
     const { inputCash } = this.state;
-    console.log({ inputCash })
+    this.setState({ returnCash: calculatingChange(inputCash) })
   }
 
   render() {
@@ -25,8 +26,9 @@ class Calculator extends Component {
       <CalculatorStyle>
         <div className="form-layout">
           <h2>COIN EXCHANGE</h2>
-      
+
           <input className="form-control" 
+            type="number"
             value={inputCash} 
             onChange={this.inputCashChange} 
             placeholder="Your cash" 
