@@ -1,5 +1,5 @@
+import assert from 'assert';
 import { calculatingChange } from '../helpers/cash';
-const assert = require('assert');
 
 describe('Calculating cash', function() {
   it("input 1.00 should return 'Your change is 1 1 dollar bill' ", function(){
