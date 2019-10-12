@@ -78,7 +78,9 @@ export const calculatingChange = (value) => {
       let cashFinish = '';
       if (cash === 0) {
         cashRemain = '';
-        cashFinish = 'and '
+
+        if (textCash !== `Your change is`) // 'and' not add if single type 
+          cashFinish = 'and ';
       }
 
 

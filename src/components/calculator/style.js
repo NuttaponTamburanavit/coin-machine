@@ -33,7 +33,7 @@ const CalculatorStyle = styled.div `
   }
 
   .result-container {
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     padding: 20px 10px;
   }
