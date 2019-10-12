@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 const CalculatorStyle = styled.div `
-  width: 100%;
-  min-height: 300px;
   max-width: 600px;
+  min-height: 300px;
   background: #fff; 
 
   padding: 20px;
   margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   .exchange-btn {
     display: inline-block;
@@ -36,6 +40,7 @@ const CalculatorStyle = styled.div `
     font-size: 1.5em;
     text-align: center;
     padding: 20px 10px;
+    color: #aaa;
   }
 `;
 

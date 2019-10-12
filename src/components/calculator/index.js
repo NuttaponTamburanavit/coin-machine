@@ -6,7 +6,7 @@ import CalculatorStyle from './style';
 class Calculator extends Component {
   state = {
     inputCash: "",
-    returnCash: "Result."
+    returnCash: ""
   }
 
   inputCashChange = (event) => {
@@ -16,6 +16,10 @@ class Calculator extends Component {
 
   handleSubmit = () => {
     const { inputCash } = this.state;
+
+    if (inputCash === "" || inputCash === "0")
+      return
+
     this.setState({ returnCash: calculatingChange(inputCash) })
   }
 
